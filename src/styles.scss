@@ -1,4 +1,47 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import "assets/bootstrap-sass/variables";
+@import "assets/scss/bootstrap-sass/variables";
 @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "assets/scss/theme/business-casual";
+
+/* general style */
+
+.sticky {
+    position: sticky;
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -ms-sticky;
+    position: -o-sticky;
+}
+
+.CarouselImg img {
+    width: auto;
+    height: 60vh;
+    max-height: 60vh;
+}
+
+
+/* general style */
+
+
+/* Bootstrap overrides */
+
+@media screen and (min-width: 768px) {
+    .nav>li>a {
+        padding: 15px 35px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .navbar-nav {
+        font-size: 1em;
+    }
+}
+
+.carousel-control.left,
+.carousel-control.right {
+    background-image: none;
+}
+
+
+/* Bootstrap overrides */
