@@ -67,7 +67,7 @@ footer .brand-name {
 
 @media screen and (min-width: $screen-tablet) {
     .nav>li>a {
-        padding: 15px 35px;
+        @include padding(15px, 35px, 15px, 35px);
     }
 }
 
