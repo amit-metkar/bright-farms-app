@@ -45,9 +45,13 @@ footer .footer-wrapper {
 }
 
 footer .footer-section {
+    @include padding-bottom(10px);
+}
+
+footer .vertical-bar {
     border: 0px solid lightgray;
     border-right-width: 1px;
-    @include padding-bottom(10px);
+    border-left-width: 1px;
 }
 
 footer .brand-name {
