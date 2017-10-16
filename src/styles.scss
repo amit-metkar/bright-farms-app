@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import "assets/scss/mixins";
 @import "assets/scss/bootstrap-sass/variables";
 @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 @import "assets/scss/theme/business-casual";
@@ -20,10 +21,6 @@
     max-height: 62vh;
 }
 
-footer .footer-text {
-    padding: 10px
-}
-
 .address-section.div {
     clear: both;
 }
@@ -36,15 +33,41 @@ footer .footer-text {
 /* general style */
 
 
+/* footer style */
+
+footer {
+    font-size: 0.9em;
+}
+
+footer .footer-wrapper {
+    padding: 10px 0px;
+    color: gray;
+}
+
+footer .footer-section {
+    border: 0px solid lightgray;
+    border-right-width: 1px;
+    @include padding-bottom(10px);
+}
+
+footer .brand-name {
+    text-transform: uppercase;
+    font-size: 1.1em;
+}
+
+
+/* footer style */
+
+
 /* Bootstrap overrides */
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: $screen-tablet) {
     .nav>li>a {
         padding: 15px 35px;
     }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: $screen-tablet) {
     .navbar-nav {
         font-size: 1em;
     }
