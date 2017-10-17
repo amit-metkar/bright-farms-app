@@ -10,10 +10,13 @@ import { Component, HostListener, OnInit } from '@angular/core';
 export class BusinessPlanComponent implements OnInit {
   dynamicComponent: Component = CompactViewComponent;
 
-  constructor() {}
-
-  ngOnInit() {
+  constructor() {
+    if (window.innerWidth > 768) {
+      this.dynamicComponent = ExpandedViewComponent;
+    }
   }
+
+  ngOnInit() {}
 
   @HostListener('window:resize', ['$event']) onresize(event) {
     if (event.target.innerWidth > 768) {
@@ -22,5 +25,4 @@ export class BusinessPlanComponent implements OnInit {
       this.dynamicComponent = CompactViewComponent;
     }
   }
-
 }
