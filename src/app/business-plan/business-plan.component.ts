@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { ExpandedViewComponent } from './expanded-view/expanded-view.component';
+import { CompactViewComponent } from './compact-view/compact-view.component';
+import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-business-plan',
@@ -6,10 +8,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./business-plan.component.scss']
 })
 export class BusinessPlanComponent implements OnInit {
+  dynamicComponent: Component = CompactViewComponent;
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
+  }
+
+  @HostListener('window:resize', ['$event']) onresize(event) {
+    if (event.target.innerWidth > 768) {
+      this.dynamicComponent = ExpandedViewComponent;
+    } else {
+      this.dynamicComponent = CompactViewComponent;
+    }
   }
 
 }

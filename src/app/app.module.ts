@@ -9,6 +9,8 @@ import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './core/header/header.component';
 import { FooterComponent } from './core/footer/footer.component';
 import { BusinessPlanComponent } from './business-plan/business-plan.component';
+import { CompactViewComponent } from './business-plan/compact-view/compact-view.component';
+import { ExpandedViewComponent } from './business-plan/expanded-view/expanded-view.component';
 
 @NgModule({
   declarations: [
@@ -18,13 +20,19 @@ import { BusinessPlanComponent } from './business-plan/business-plan.component';
     HomeComponent,
     HeaderComponent,
     FooterComponent,
-    BusinessPlanComponent
+    BusinessPlanComponent,
+    CompactViewComponent,
+    ExpandedViewComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
   providers: [],
+  entryComponents: [
+    CompactViewComponent,
+    ExpandedViewComponent
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
