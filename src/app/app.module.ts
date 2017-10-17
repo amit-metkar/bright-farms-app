@@ -11,6 +11,7 @@ import { FooterComponent } from './core/footer/footer.component';
 import { BusinessPlanComponent } from './business-plan/business-plan.component';
 import { CompactViewComponent } from './business-plan/compact-view/compact-view.component';
 import { ExpandedViewComponent } from './business-plan/expanded-view/expanded-view.component';
+import { WindowRefService } from './shared/services/window-ref.service';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ import { ExpandedViewComponent } from './business-plan/expanded-view/expanded-vi
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [WindowRefService],
   entryComponents: [
     CompactViewComponent,
     ExpandedViewComponent
