@@ -45,6 +45,15 @@
                         <span class="glyphicon glyphicon-map-marker" area-hidden="true"></span> {{ 'nav.contact' | translate }}
                     </a>
                 </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                      {{ 'nav.lang.title' | translate }} <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="link" (click)="changeLanguage('en')">{{ 'nav.lang.1' | translate }}</a></li>
+                        <li><a class="link" (click)="changeLanguage('mr')">{{ 'nav.lang.2' | translate }}</a></li>
+                    </ul>
+                </li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->

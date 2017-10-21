@@ -26,6 +26,10 @@ export class AppComponent implements OnInit {
       translate.use('en');
   }
 
+  changeLanguage(event: string) {
+    this.translate.use(event);
+  }
+
   public ngOnInit(): void {
     // Reset and preserve scroll position on view navigation
     this.location.subscribe((event: PopStateEvent) => {

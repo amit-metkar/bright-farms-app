@@ -52,7 +52,12 @@
         "home": "Home",
         "goat-farming": "Goat Farming",
         "about": "About",
-        "contact": "Contact"
+        "contact": "Contact",
+        "lang": {
+            "title": "Language",
+            "1": "English",
+            "2": "Marathi"
+        }
     },
     "about": {
         "title": "About Us",
