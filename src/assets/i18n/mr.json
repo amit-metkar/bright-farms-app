@@ -5,12 +5,7 @@
         "tag-line": "गुणवत्तेसाठी"
     },
     "footer": {
-        "copyrights": "Copyright &copy; 2017 Bright Farms. All rights reserved.",
-        "developer": {
-            "text": "Website designed by",
-            "name": "Amit Metkar",
-            "mail-to": "mailto:amit.metkar@gmail.com;admin@brightfarms.in"
-        }
+        "copyrights": "Copyright &copy; 2017 Bright Farms. All rights reserved. Website designed by <a href='mailto:amit.metkar@gmail.com;admin@brightfarms.in' target='_top'>Amit Metkar</a>"
     },
     "contact": {
         "map-tatle": "आम्हाला नकाशावर पहा",

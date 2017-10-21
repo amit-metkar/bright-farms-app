@@ -55,9 +55,7 @@
         <div class="row">
             <div class="col-xs-12 footer-wrapper">
                 <div class="row">
-                    <div class="col-xs-12 text-center">
-                        {{ 'footer.copyrights' | translate }} {{ 'footer.developer.text' | translate }} <a [href]="'footer.developer.mail-to' | translate" target="_top">{{ 'footer.developer.name' | translate }}</a>
-                    </div>
+                    <div class="col-xs-12 text-center" [innerHTML]="'footer.copyrights' | translate"></div>
                 </div>
             </div>
         </div>
