@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-lg-12">
-        <h4>Find us on Map</h4>
+        <h4>{{ 'contact.map-tatle' | translate }}</h4>
     </div>
 </div>
 <div class="row">
@@ -18,45 +18,45 @@
                 </div>
                 <div class="row">
                     <div class="col-xs-6 col-sm-4 col-md-12">
-                        <h4>Address</h4>
+                        <h4>{{ 'contact.address.title' | translate }}</h4>
                         <div class="address-section">
-                            <div>Dhatrak Vasti</div>
-                            <div>Mhasrul Adgaon Road</div>
-                            <div>Nashik, Maharashtra, India</div>
+                            <div>{{ 'contact.address.line-1' | translate }}</div>
+                            <div>{{ 'contact.address.line-2' | translate }}</div>
+                            <div>{{ 'contact.address.line-3' | translate }}</div>
                         </div>
                         <br>
                         <a href="https://www.google.com/maps/place/Bright+Farms/@20.0410746,73.8266098,15z/data=!4m5!3m4!1s0x0:0x7a7dfad5260adf0a!8m2!3d20.0410746!4d73.8266098" target="_blank">
-                            <span class="glyphicon glyphicon-road" area-hidden="true"></span> Get directions to Bright Farms
+                            <span class="glyphicon glyphicon-road" area-hidden="true"></span> {{ 'contact.address.direction' | translate }}
                         </a>
                         <br>
                         <br>
                     </div>
                     <div class="col-xs-6 col-sm-4 col-md-12">
-                        <h4>Call</h4>
+                        <h4>{{ 'contact.phone.title' | translate }}</h4>
                         <div class="address-section">
                             <div>
-                                <a href="tel:+919545042176">
-                                    <span class="glyphicon glyphicon-earphone" area-hidden="true"></span> +91 95450-42176
+                                <a [href]="'contact.phone.phone-1.value' | translate">
+                                    <span class="glyphicon glyphicon-earphone" area-hidden="true"></span> {{ 'contact.phone.phone-1.display' | translate }}
                                 </a>
                             </div>
                             <div>
-                                <a href="tel:+919881835530">
-                                    <span class="glyphicon glyphicon-earphone" area-hidden="true"></span> +91 98818-35530
+                                <a [href]="'contact.phone.phone-2.value' | translate">
+                                    <span class="glyphicon glyphicon-earphone" area-hidden="true"></span> {{ 'contact.phone.phone-2.display' | translate }}
                                 </a>
                             </div>
                             <div>
-                                <a href="tel:+919822299323">
-                                    <span class="glyphicon glyphicon-earphone" area-hidden="true"></span> +91 98222-99323
+                                <a [href]="'contact.phone.phone-3.value' | translate">
+                                    <span class="glyphicon glyphicon-earphone" area-hidden="true"></span> {{ 'contact.phone.phone-3.display' | translate }}
                                 </a>
                             </div>
                         </div>
                         <br>
                     </div>
                     <div class="col-xs-6 col-sm-4 col-md-12">
-                        <h4>Email</h4>
+                        <h4>{{ 'contact.email.title' | translate }}</h4>
                         <div class="address-section">
-                            <a href="mailto:info@brightfarms.in" target="_top">
-                                <span class="glyphicon glyphicon-envelope" area-hidden="true"></span> info@brightfarms.in
+                            <a [href]="'contact.email.email-1.value' | translate" target="_top">
+                                <span class="glyphicon glyphicon-envelope" area-hidden="true"></span> {{ 'contact.email.email-1.display' | translate }}
                             </a>
                         </div>
                     </div>

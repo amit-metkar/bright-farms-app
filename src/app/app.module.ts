@@ -1,5 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {HttpClientModule, HttpClient} from '@angular/common/http';
+import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +15,10 @@ import { BusinessPlanComponent } from './business-plan/business-plan.component';
 import { CompactViewComponent } from './business-plan/compact-view/compact-view.component';
 import { ExpandedViewComponent } from './business-plan/expanded-view/expanded-view.component';
 import { WindowRefService } from './shared/services/window-ref.service';
+
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http, '../assets/i18n/', '.json');
+}
 
 @NgModule({
   declarations: [
@@ -27,7 +34,15 @@ import { WindowRefService } from './shared/services/window-ref.service';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+          provide: TranslateLoader,
+          useFactory: (HttpLoaderFactory),
+          deps: [HttpClient]
+      }
+  })
   ],
   providers: [WindowRefService],
   entryComponents: [

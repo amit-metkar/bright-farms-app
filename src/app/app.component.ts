@@ -1,20 +1,9 @@
-import {
-  Location,
-  PopStateEvent
-} from '@angular/common';
-import {
-  NavigationEnd,
-  NavigationStart,
-  Router
-} from '@angular/router';
-import {
-  Component,
-  OnInit
-} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Location, PopStateEvent } from '@angular/common';
+import { NavigationEnd, NavigationStart, Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 
-import {
-  WindowRefService
-} from './shared/services/window-ref.service';
+import { WindowRefService } from './shared/services/window-ref.service';
 
 @Component({
   selector: 'app-root',
@@ -27,8 +16,14 @@ export class AppComponent implements OnInit {
   private yScrollStack: number[] = [];
   private _window: Window;
 
-  constructor(private router: Router, private location: Location, private windowRef: WindowRefService) {
-    this._window = windowRef.nativeWindow;
+  constructor(
+    private router: Router,
+    private location: Location,
+    private windowRef: WindowRefService,
+    private translate: TranslateService) {
+      this._window = windowRef.nativeWindow;
+      translate.setDefaultLang('en');
+      translate.use('en');
   }
 
   public ngOnInit(): void {
