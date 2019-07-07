@@ -8,7 +8,7 @@ import { Component, HostListener, OnInit } from '@angular/core';
   styleUrls: ['./business-plan.component.scss']
 })
 export class BusinessPlanComponent implements OnInit {
-  dynamicComponent: Component = CompactViewComponent;
+  dynamicComponent: any = CompactViewComponent;
 
   constructor() {
     if (window.innerWidth > 768) {
